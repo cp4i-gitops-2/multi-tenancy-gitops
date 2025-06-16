@@ -107,8 +107,7 @@ spec:
                   kubectl create secret generic sonarqube-access --from-literal=SONARQUBE_USER=admin --from-literal=SONARQUBE_PASSWORD=admin --from-literal=SONARQUBE_URL="http://sonarqube-sonarqube.tools:9000"
                 fi
           container:
-            image: "quay.io/ibmgaragecloud/nodejs"
-            tag: "latest"
+            image: "registry.access.redhat.com/ubi8/nodejs-18"
             command: "bash"
             args:
               - "-c"
